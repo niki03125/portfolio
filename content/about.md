@@ -8,7 +8,7 @@ layout: "simple"
 
 <div style="text-align: center;">
 
-  <img src="/images/me.jpg" alt="Picture of me"
+  <img src="/portfolio/images/me.jpg" alt="Picture of me"
        style="display: block; margin: 0 auto 20px auto; border-radius: 20px; width: 300px; max-width: 100%; box-shadow: 0 15px 40px rgba(0,0,0,0.3);" />
 
   <h1 style="margin-bottom: 5px;">Nikita Nielsen</h1>
