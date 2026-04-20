@@ -42,7 +42,7 @@ So basically:
 
 Here is a comparison between assistants and agents:
 
-![comparinson](/static/images/comparison.png)
+![comparinson](/portfolio/images/comparison.png)
 
 ## Types of Agents
 
