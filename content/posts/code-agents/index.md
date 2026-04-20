@@ -144,4 +144,4 @@ it's about making something that works well for the user and feels intuitive.
 
 ## Screenshots
 
-![Code Agents screenshot](/static/images/CodeAgent-cover.png)
+![Code Agents screenshot](/portfolio/images/CodeAgent-cover.png)
