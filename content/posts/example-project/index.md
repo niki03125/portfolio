@@ -1,8 +1,10 @@
----
+﻿---
 title: "Example Project"
 date: 2023-10-01
 description: "A short summary of this example project. This will appear on the project card."
-image: "project-image.jpg"
+featureimage: "/project-image.jpg"
+showHero: true
+heroStyle: "basic"
 technologies: ["HTML", "CSS", "JavaScript"]
 github: "https://github.com/yourusername/example-project"
 draft: false

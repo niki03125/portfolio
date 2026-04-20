@@ -1,8 +1,10 @@
----
+﻿---
 title: "RAG Chatbot"
 date: 2026-04-16
 description: "A chatbot project built with Retrieval Augmented Generation (RAG), where the model answers based on my own material."
-image: "chatbot-cover.jpg"
+featureimage: "/chatbot-cover.jpg"
+showHero: true
+heroStyle: "basic"
 github: "PASTE-YOUR-GITHUB-LINK-HERE"
 draft: false
 ---

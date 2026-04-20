@@ -1,97 +1,147 @@
----
+﻿---
 title: "Code Agents"
 date: 2026-04-20
-description: "xxx"
-image: "chatbot-cover.jpg"
-github: "PASTE-YOUR-GITHUB-LINK-HERE"
+description: "Working with code agents using Codex, focusing on prompt precision and building a meditation quiz app."
+featureimage: "/images/CodeAgent-cover.png"
+showHero: true
+heroStyle: "basic"
+github: "https://github.com/niki03125/meditations-quiz-page"
 draft: false
 ---
 
 ## Project Overview
 
-// lav om 
-This project is a **RAG chatbot** built as part of my AI-driven application development course.  
-The goal was to create a chatbot that can answer questions based on a specific set of documents instead of only relying on the model's general knowledge.
+In this project, I worked with **code agents** using codex.
 
-RAG stands for **Retrieval Augmented Generation**.  
-This means the chatbot first searches through selected material, retrieves the most relevant information, and then uses that information to generate an answer.
+The main focus was to understand how **precise a prompt needs to be**, and how to communicate clearly with an AI agent without confusing it.
 
-## What the Chatbot Does
+I explored how AI can go from just answering questions to actually helping build and improve a project.
 
-// lav om 
-The chatbot allows a user to ask questions about a chosen set of documents or course material.
+To make it practical, I worked on a case where I had to build a **meditation quiz website**.  
+The goal was to create a simple and calm experience where users can answer questions, continue even if they get something wrong, and come back later to continue.
 
-Instead of answering freely from the language model alone, it:
-1. receives a question from the user  
-2. searches relevant text chunks in the uploaded material  
-3. retrieves the most relevant information  
-4. uses that context to generate a grounded answer  
+## Assistants vs Agents
 
-This makes the chatbot more useful when working with specific documents, notes, or learning material.
+One of the things I learned is the difference between **assistants** and **agents**.
 
-## How I Built It
-// lav om 
-To build this project, I worked with the basic RAG pipeline:
+An assistant is mostly something you ask for help:
+- it explains things  
+- helps with code  
+- gives suggestions  
 
-- I started with a set of documents or text material
-- The material was split into smaller chunks
-- These chunks were converted into embeddings
-- The embeddings were stored so they could be searched
-- When the user asks a question, the system retrieves the most relevant chunks
-- The retrieved text is then sent together with the prompt to the language model
-- The model generates an answer based on that context
+An agent (like Codex in this case) is more action-oriented:
+- it can generate structured code  
+- follow instructions  
+- help solve tasks step by step  
 
-The main idea was to connect **my own material** to an LLM in a structured way.
+So basically:
+- assistant = helps you  
+- agent = helps solve the task  
 
-## Why RAG is Useful
-// lav om 
-One of the important things I learned is that RAG can be very useful when you want answers based on specific sources.
+## Comparison
 
-RAG is valuable because it can:
-- make answers more relevant to a chosen topic
-- reduce hallucinations
-- let the chatbot use custom documents
-- make it easier to build domain-specific assistants
+Here is a comparison between assistants and agents:
 
-At the same time, RAG also has limitations:
-- the answer quality depends on the quality of the source material
-- chunking and retrieval strategy matter a lot
-- if the wrong context is retrieved, the answer can still be weak
-- it is not always the best solution for every task
+![comparinson](/images/comparison.png)
+
+## Types of Agents
+
+I also learned that there are different types of agents.
+
+### Horizontal Agents
+These are general-purpose agents that can do a bit of everything.  
+Like ChatGPT, which can help with coding, writing, debugging, etc.
+
+### Vertical Agents
+These are more specialized.  
+They are built to be really good at one specific thing.
+
+That made me think about what is best:
+- something that can do everything okay  
+- or something that is really good at one thing  
+
+## The Case: Meditation Quiz App
+
+To connect the theory to something practical, I worked on a **meditation quiz app**.
+
+The idea was:
+- multiple choice questions  
+- you can continue even if your answer is wrong  
+- you can take the quiz again  
+- your progress should be saved  
+- you can choose to continue later or start over  
+
+So it's not just a quiz it's more about the **user experience and flow**.
+
+## How I Worked With It
+
+I used Codex as a **code agent** to help develop parts of the solution.
+
+The main challenge was learning how to write **good prompts**.
+
+I worked on:
+- making prompts more specific  
+- structuring instructions clearly  
+- avoiding vague descriptions  
+- testing different prompt styles  
+
+I learned that:
+- if the prompt is too vague â†’ the result becomes unclear  
+- if the prompt is too complex â†’ the agent can get confused  
+- the best prompts are **clear, structured, and focused**
+
+I also learned that you have to be careful with what access you give the agent.  
+It can sometimes see more files than expected (like `.gitignore` and other project files).
+
+## Debugging
+
+One big thing I learned was how important debugging is when working with an AI agent.
+
+If something doesn´t work:
+- open DevTools (F12)
+- check the console
+- copy the error
+- give the error to Codex
+
+This made it much easier to fix problems quickly.
 
 ## What I Learned
-// lav om 
-Through this project, I learned more about:
 
-- how RAG architecture works in practice
-- how embeddings are used to represent text
-- how retrieval helps connect a language model to external knowledge
-- the difference between a normal chatbot and a RAG-based chatbot
-- why data quality and structure are important in AI systems
+- how to use codex as a code agent  
+- how important prompt precision is  
+- how unclear prompts can confuse an AI  
+- difference between assistants and agents  
+- horizontal vs vertical agents  
+- how AI can support development  
+- how to debug using AI and browser tools  
 
-I also learned that building AI applications is not only about the model itself, but also about the pipeline around it.
-
-## Technologies Used
-// lav om 
-- Large Language Model (LLM)
-- Retrieval Augmented Generation (RAG)
-- Embeddings
-- Document chunking
-- Retrieval / semantic search
+## Technologies and Concepts Used
+ 
+- Prompt engineering   
+- Quiz logic  
+- Local storage (saving progress)  
+- GitHub Pages  
 
 ## Reflection
-// lav om 
-This project gave me a practical introduction to how modern AI assistants can be connected to real data.
 
-It was especially interesting to see how a chatbot becomes more useful when it can answer from selected material instead of only general model knowledge.  
-This made the project feel more realistic and closer to real-world AI applications.
+This project changed how I see AI.
+
+Before, I mostly used it as a chatbot.  
+Now I see it more like a tool that depends a lot on **how well I communicate with it**.
+
+The biggest takeaway was that **the quality of the prompt controls the quality of the result**.
+
+The meditation quiz case also showed me that it's not just about code”  
+it's about making something that works well for the user and feels intuitive.
+
+## Live Demo
+
+[View the project here](https://niki03125.github.io/meditations-quiz-page/)
 
 ## GitHub Repository
 
-[View the project on GitHub](PASTE-YOUR-GITHUB-LINK-HERE)
+[View the project on GitHub](https://github.com/niki03125/meditations-quiz-page)
 
 ## Screenshots
 
-Add screenshots of the chatbot here.
-
-![Chatbot screenshot](chatbot-screenshot.jpg)
+![Code Agents screenshot](/images/CodeAgent-cover.png)

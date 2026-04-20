@@ -21,7 +21,7 @@
 
   
   
-    <meta name="description" content="xxx">
+    <meta name="description" content="Working with code agents using Codex, focusing on prompt precision and building a meditation quiz app.">
   
   
   
@@ -40,7 +40,7 @@
   <meta property="og:url" content="http://localhost:1313/posts/code-agents/">
   <meta property="og:site_name" content="Blowfish">
   <meta property="og:title" content="Code Agents">
-  <meta property="og:description" content="xxx">
+  <meta property="og:description" content="Working with code agents using Codex, focusing on prompt precision and building a meditation quiz app.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -50,7 +50,7 @@
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Code Agents">
-  <meta name="twitter:description" content="xxx">
+  <meta name="twitter:description" content="Working with code agents using Codex, focusing on prompt precision and building a meditation quiz app.">
 
   
   
@@ -203,7 +203,7 @@
     "articleSection": "Posts",
     "name": "Code Agents",
     "headline": "Code Agents",
-    "description": "xxx",
+    "description": "Working with code agents using Codex, focusing on prompt precision and building a meditation quiz app.",
     "inLanguage": "en-us",
     "url" : "http://localhost:1313/posts/code-agents/",
     "author" : {
@@ -219,7 +219,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "540"
+    "wordCount": "641"
   }]
   </script>
 
@@ -510,6 +510,48 @@
   <article>
     
     
+      
+      
+      
+      
+        
+
+
+
+
+
+  
+    
+  
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+
+      
+    
 
     
     <header id="single_header" class="mt-5 max-w-prose">
@@ -567,7 +609,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-04-20T00:00:00&#43;00:00">20 April 2026</time><span class="px-2 text-primary-500">&middot;</span><span>540 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+      <time datetime="2026-04-20T00:00:00&#43;00:00">20 April 2026</time><span class="px-2 text-primary-500">&middot;</span><span>641 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
     
 
     
@@ -646,79 +688,164 @@
     </span>
     
 </h2>
-<p>// lav om
-This project is a <strong>RAG chatbot</strong> built as part of my AI-driven application development course.<br>
-The goal was to create a chatbot that can answer questions based on a specific set of documents instead of only relying on the model&rsquo;s general knowledge.</p>
-<p>RAG stands for <strong>Retrieval Augmented Generation</strong>.<br>
-This means the chatbot first searches through selected material, retrieves the most relevant information, and then uses that information to generate an answer.</p>
+<p>In this project, I worked with <strong>code agents</strong> using codex.</p>
+<p>The main focus was to understand how <strong>precise a prompt needs to be</strong>, and how to communicate clearly with an AI agent without confusing it.</p>
+<p>I explored how AI can go from just answering questions to actually helping build and improve a project.</p>
+<p>To make it practical, I worked on a case where I had to build a <strong>meditation quiz website</strong>.<br>
+The goal was to create a simple and calm experience where users can answer questions, continue even if they get something wrong, and come back later to continue.</p>
 
-<h2 class="relative group">What the Chatbot Does
-    <div id="what-the-chatbot-does" class="anchor"></div>
+<h2 class="relative group">Assistants vs Agents
+    <div id="assistants-vs-agents" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-the-chatbot-does" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#assistants-vs-agents" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>// lav om
-The chatbot allows a user to ask questions about a chosen set of documents or course material.</p>
-<p>Instead of answering freely from the language model alone, it:</p>
-<ol>
-<li>receives a question from the user</li>
-<li>searches relevant text chunks in the uploaded material</li>
-<li>retrieves the most relevant information</li>
-<li>uses that context to generate a grounded answer</li>
-</ol>
-<p>This makes the chatbot more useful when working with specific documents, notes, or learning material.</p>
+<p>One of the things I learned is the difference between <strong>assistants</strong> and <strong>agents</strong>.</p>
+<p>An assistant is mostly something you ask for help:</p>
+<ul>
+<li>it explains things</li>
+<li>helps with code</li>
+<li>gives suggestions</li>
+</ul>
+<p>An agent (like Codex in this case) is more action-oriented:</p>
+<ul>
+<li>it can generate structured code</li>
+<li>follow instructions</li>
+<li>help solve tasks step by step</li>
+</ul>
+<p>So basically:</p>
+<ul>
+<li>assistant = helps you</li>
+<li>agent = helps solve the task</li>
+</ul>
 
-<h2 class="relative group">How I Built It
-    <div id="how-i-built-it" class="anchor"></div>
+<h2 class="relative group">Comparison
+    <div id="comparison" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#how-i-built-it" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#comparison" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>// lav om
-To build this project, I worked with the basic RAG pipeline:</p>
-<ul>
-<li>I started with a set of documents or text material</li>
-<li>The material was split into smaller chunks</li>
-<li>These chunks were converted into embeddings</li>
-<li>The embeddings were stored so they could be searched</li>
-<li>When the user asks a question, the system retrieves the most relevant chunks</li>
-<li>The retrieved text is then sent together with the prompt to the language model</li>
-<li>The model generates an answer based on that context</li>
-</ul>
-<p>The main idea was to connect <strong>my own material</strong> to an LLM in a structured way.</p>
+<p>Here is a comparison between assistants and agents:</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="comparinson"
+    src="/images/comparison.png"
+    ></figure>
 
-<h2 class="relative group">Why RAG is Useful
-    <div id="why-rag-is-useful" class="anchor"></div>
+<h2 class="relative group">Types of Agents
+    <div id="types-of-agents" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-rag-is-useful" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#types-of-agents" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>// lav om
-One of the important things I learned is that RAG can be very useful when you want answers based on specific sources.</p>
-<p>RAG is valuable because it can:</p>
+<p>I also learned that there are different types of agents.</p>
+
+<h3 class="relative group">Horizontal Agents
+    <div id="horizontal-agents" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#horizontal-agents" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>These are general-purpose agents that can do a bit of everything.<br>
+Like ChatGPT, which can help with coding, writing, debugging, etc.</p>
+
+<h3 class="relative group">Vertical Agents
+    <div id="vertical-agents" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vertical-agents" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>These are more specialized.<br>
+They are built to be really good at one specific thing.</p>
+<p>That made me think about what is best:</p>
 <ul>
-<li>make answers more relevant to a chosen topic</li>
-<li>reduce hallucinations</li>
-<li>let the chatbot use custom documents</li>
-<li>make it easier to build domain-specific assistants</li>
+<li>something that can do everything okay</li>
+<li>or something that is really good at one thing</li>
 </ul>
-<p>At the same time, RAG also has limitations:</p>
+
+<h2 class="relative group">The Case: Meditation Quiz App
+    <div id="the-case-meditation-quiz-app" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-case-meditation-quiz-app" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>To connect the theory to something practical, I worked on a <strong>meditation quiz app</strong>.</p>
+<p>The idea was:</p>
 <ul>
-<li>the answer quality depends on the quality of the source material</li>
-<li>chunking and retrieval strategy matter a lot</li>
-<li>if the wrong context is retrieved, the answer can still be weak</li>
-<li>it is not always the best solution for every task</li>
+<li>multiple choice questions</li>
+<li>you can continue even if your answer is wrong</li>
+<li>you can take the quiz again</li>
+<li>your progress should be saved</li>
+<li>you can choose to continue later or start over</li>
 </ul>
+<p>So it&rsquo;s not just a quiz it&rsquo;s more about the <strong>user experience and flow</strong>.</p>
+
+<h2 class="relative group">How I Worked With It
+    <div id="how-i-worked-with-it" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#how-i-worked-with-it" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>I used Codex as a <strong>code agent</strong> to help develop parts of the solution.</p>
+<p>The main challenge was learning how to write <strong>good prompts</strong>.</p>
+<p>I worked on:</p>
+<ul>
+<li>making prompts more specific</li>
+<li>structuring instructions clearly</li>
+<li>avoiding vague descriptions</li>
+<li>testing different prompt styles</li>
+</ul>
+<p>I learned that:</p>
+<ul>
+<li>if the prompt is too vague â†’ the result becomes unclear</li>
+<li>if the prompt is too complex â†’ the agent can get confused</li>
+<li>the best prompts are <strong>clear, structured, and focused</strong></li>
+</ul>
+<p>I also learned that you have to be careful with what access you give the agent.<br>
+It can sometimes see more files than expected (like <code>.gitignore</code> and other project files).</p>
+
+<h2 class="relative group">Debugging
+    <div id="debugging" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#debugging" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>One big thing I learned was how important debugging is when working with an AI agent.</p>
+<p>If something doesn´t work:</p>
+<ul>
+<li>open DevTools (F12)</li>
+<li>check the console</li>
+<li>copy the error</li>
+<li>give the error to Codex</li>
+</ul>
+<p>This made it much easier to fix problems quickly.</p>
 
 <h2 class="relative group">What I Learned
     <div id="what-i-learned" class="anchor"></div>
@@ -729,33 +856,30 @@ One of the important things I learned is that RAG can be very useful when you wa
     </span>
     
 </h2>
-<p>// lav om
-Through this project, I learned more about:</p>
 <ul>
-<li>how RAG architecture works in practice</li>
-<li>how embeddings are used to represent text</li>
-<li>how retrieval helps connect a language model to external knowledge</li>
-<li>the difference between a normal chatbot and a RAG-based chatbot</li>
-<li>why data quality and structure are important in AI systems</li>
+<li>how to use codex as a code agent</li>
+<li>how important prompt precision is</li>
+<li>how unclear prompts can confuse an AI</li>
+<li>difference between assistants and agents</li>
+<li>horizontal vs vertical agents</li>
+<li>how AI can support development</li>
+<li>how to debug using AI and browser tools</li>
 </ul>
-<p>I also learned that building AI applications is not only about the model itself, but also about the pipeline around it.</p>
 
-<h2 class="relative group">Technologies Used
-    <div id="technologies-used" class="anchor"></div>
+<h2 class="relative group">Technologies and Concepts Used
+    <div id="technologies-and-concepts-used" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#technologies-used" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#technologies-and-concepts-used" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>// lav om</p>
 <ul>
-<li>Large Language Model (LLM)</li>
-<li>Retrieval Augmented Generation (RAG)</li>
-<li>Embeddings</li>
-<li>Document chunking</li>
-<li>Retrieval / semantic search</li>
+<li>Prompt engineering</li>
+<li>Quiz logic</li>
+<li>Local storage (saving progress)</li>
+<li>GitHub Pages</li>
 </ul>
 
 <h2 class="relative group">Reflection
@@ -767,10 +891,23 @@ Through this project, I learned more about:</p>
     </span>
     
 </h2>
-<p>// lav om
-This project gave me a practical introduction to how modern AI assistants can be connected to real data.</p>
-<p>It was especially interesting to see how a chatbot becomes more useful when it can answer from selected material instead of only general model knowledge.<br>
-This made the project feel more realistic and closer to real-world AI applications.</p>
+<p>This project changed how I see AI.</p>
+<p>Before, I mostly used it as a chatbot.<br>
+Now I see it more like a tool that depends a lot on <strong>how well I communicate with it</strong>.</p>
+<p>The biggest takeaway was that <strong>the quality of the prompt controls the quality of the result</strong>.</p>
+<p>The meditation quiz case also showed me that it&rsquo;s not just about code”<br>
+it&rsquo;s about making something that works well for the user and feels intuitive.</p>
+
+<h2 class="relative group">Live Demo
+    <div id="live-demo" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#live-demo" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p><a href="https://niki03125.github.io/meditations-quiz-page/"  target="_blank" rel="noreferrer">View the project here</a></p>
 
 <h2 class="relative group">GitHub Repository
     <div id="github-repository" class="anchor"></div>
@@ -781,7 +918,7 @@ This made the project feel more realistic and closer to real-world AI applicatio
     </span>
     
 </h2>
-<p><a href="PASTE-YOUR-GITHUB-LINK-HERE" >View the project on GitHub</a></p>
+<p><a href="https://github.com/niki03125/meditations-quiz-page"  target="_blank" rel="noreferrer">View the project on GitHub</a></p>
 
 <h2 class="relative group">Screenshots
     <div id="screenshots" class="anchor"></div>
@@ -792,14 +929,13 @@ This made the project feel more realistic and closer to real-world AI applicatio
     </span>
     
 </h2>
-<p>Add screenshots of the chatbot here.</p>
 <figure><img
     class="my-0 rounded-md"
     loading="lazy"
     decoding="async"
     fetchpriority="low"
-    alt="Chatbot screenshot"
-    src="chatbot-screenshot.jpg"
+    alt="Code Agents screenshot"
+    src="/images/CodeAgent-cover.png"
     ></figure>
 
           
