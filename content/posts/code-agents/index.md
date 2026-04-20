@@ -42,7 +42,7 @@ So basically:
 
 Here is a comparison between assistants and agents:
 
-![comparinson](/images/comparison.png)
+![comparinson](/static/images/comparison.png)
 
 ## Types of Agents
 
@@ -144,4 +144,4 @@ it's about making something that works well for the user and feels intuitive.
 
 ## Screenshots
 
-![Code Agents screenshot](/images/CodeAgent-cover.png)
+![Code Agents screenshot](/static/images/CodeAgent-cover.png)
