@@ -5,7 +5,7 @@ description: "A RAG chatbot integrated directly into my portfolio website, built
 featureimage: "/chatbot-cover.jpg"
 showHero: true
 heroStyle: "basic"
-github: "PASTE-YOUR-GITHUB-LINK-HERE"
+github: "https://github.com/niki03125/portfolio"
 draft: false
 ---
 
