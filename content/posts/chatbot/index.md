@@ -134,7 +134,7 @@ It also gave me a much better understanding of how modern AI assistants are buil
 
 ## GitHub Repository
 
-[View the project on GitHub](PASTE-YOUR-GITHUB-LINK-HERE)
+[View the project on GitHub](https://github.com/niki03125/portfolio)
 
 ---
 
