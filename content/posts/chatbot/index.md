@@ -1,7 +1,7 @@
 ﻿---
 title: "RAG Chatbot"
 date: 2026-04-16
-description: "A chatbot project built with Retrieval Augmented Generation (RAG), where the model answers based on my own material."
+description: "A RAG chatbot integrated directly into my portfolio website, built with Dify, a Java backend, and custom web integration."
 featureimage: "/chatbot-cover.jpg"
 showHero: true
 heroStyle: "basic"
@@ -11,87 +11,133 @@ draft: false
 
 ## Project Overview
 
-This project is a **RAG chatbot** built as part of my AI-driven application development course.  
-The goal was to create a chatbot that can answer questions based on a specific set of documents instead of only relying on the model's general knowledge.
+This project is a **RAG chatbot integrated directly into my portfolio website**.  
+The goal was not only to build a chatbot, but to make it **understand and answer questions about my own portfolio content**.
 
-RAG stands for **Retrieval Augmented Generation**.  
-This means the chatbot first searches through selected material, retrieves the most relevant information, and then uses that information to generate an answer.
+The chatbot uses **Retrieval Augmented Generation (RAG)**, meaning it answers based on my own data instead of only relying on general AI knowledge.
+
+---
+
+## Live Integration on My Website
+
+A key part of this project is that the chatbot is **fully integrated into my portfolio website**.
+
+Users can:
+- ask questions directly on the site  
+- get answers based on my projects and content  
+- interact with the chatbot in real time  
+
+This makes the portfolio more interactive and demonstrates a real-world AI application.
+
+---
 
 ## What the Chatbot Does
 
-The chatbot allows a user to ask questions about a chosen set of documents or course material.
+Instead of answering freely, the chatbot:
 
-Instead of answering freely from the language model alone, it:
 1. receives a question from the user  
-2. searches relevant text chunks in the uploaded material  
-3. retrieves the most relevant information  
-4. uses that context to generate a grounded answer  
+2. sends the request to a backend API  
+3. retrieves relevant information from my portfolio data  
+4. generates a contextual answer  
 
-This makes the chatbot more useful when working with specific documents, notes, or learning material.
+This ensures that answers are:
+- relevant  
+- based on my own work  
+- more reliable than a standard chatbot  
 
-## How I Built It
+---
 
-To build this project, I worked with the basic RAG pipeline:
+## System Architecture
 
-- I started with a set of documents or text material
-- The material was split into smaller chunks
-- These chunks were converted into embeddings
-- The embeddings were stored so they could be searched
-- When the user asks a question, the system retrieves the most relevant chunks
-- The retrieved text is then sent together with the prompt to the language model
-- The model generates an answer based on that context
+This project is built as a complete pipeline consisting of frontend, backend, and AI system.
 
-The main idea was to connect **my own material** to an LLM in a structured way.
+### 1. Data Collection
+- My portfolio website is crawled using a **Java application**
+- A sitemap is used to find all pages
+- Content is extracted using **Jina Reader**
+- The text is cleaned and converted into markdown
 
-## Why RAG is Useful
+### 2. Knowledge Base (RAG)
+- The extracted content is stored in **Dify Knowledge**
+- The text is split into chunks
+- The chunks are converted into embeddings
+- This enables semantic search across my portfolio
 
-One of the important things I learned is that RAG can be very useful when you want answers based on specific sources.
+### 3. Backend (API Layer)
+- A **Java backend server** handles requests
+- The backend exposes a `/chat` endpoint
+- It securely connects to the **Dify API**
+- API keys are stored using **GitHub Secrets**
 
-RAG is valuable because it can:
-- make answers more relevant to a chosen topic
-- reduce hallucinations
-- let the chatbot use custom documents
-- make it easier to build domain-specific assistants
+### 4. Frontend Integration
+- A custom chat interface is added to my Hugo portfolio
+- The frontend sends user questions using JavaScript (Fetch API)
+- The chatbot response is displayed directly on the website
 
-At the same time, RAG also has limitations:
-- the answer quality depends on the quality of the source material
-- chunking and retrieval strategy matter a lot
-- if the wrong context is retrieved, the answer can still be weak
-- it is not always the best solution for every task
-
-## What I Learned
-
-Through this project, I learned more about:
-
-- how RAG architecture works in practice
-- how embeddings are used to represent text
-- how retrieval helps connect a language model to external knowledge
-- the difference between a normal chatbot and a RAG-based chatbot
-- why data quality and structure are important in AI systems
-
-I also learned that building AI applications is not only about the model itself, but also about the pipeline around it.
+---
 
 ## Technologies Used
 
-- Large Language Model (LLM)
-- Retrieval Augmented Generation (RAG)
-- Embeddings
-- Document chunking
-- Retrieval / semantic search
+- **Hugo** – portfolio website  
+- **GitHub Pages** – hosting  
+- **JavaScript (Fetch API)** – frontend communication  
+- **Java (VS Code)** – backend API and crawler  
+- **Spark Java** – lightweight API server  
+- **Dify** – RAG system and chatbot  
+- **Jina Reader** – content extraction  
+- **GitHub Actions (Secrets & Variables)** – secure API key handling  
+
+---
+
+## Why RAG is Useful
+
+RAG makes it possible for the chatbot to:
+
+- answer based on real data instead of guessing  
+- reduce hallucinations  
+- provide domain-specific knowledge  
+- connect AI to custom content  
+
+At the same time, I learned that:
+- good data quality is very important  
+- chunking and retrieval strategy matter a lot  
+- wrong context can still lead to weak answers  
+
+---
+
+## What I Learned
+
+Through this project, I learned:
+
+- how a full RAG pipeline works in practice  
+- how to connect a frontend, backend, and AI system  
+- how APIs are used to integrate AI into real applications  
+- how to handle requests, encoding, and data flow  
+- how to test and deploy a working AI system  
+
+This project showed me that building AI applications involves much more than just using a model — it requires a complete system.
+
+---
 
 ## Reflection
 
-This project gave me a practical introduction to how modern AI assistants can be connected to real data.
+This project felt like a **real-world AI application**, not just a demo.
 
-It was especially interesting to see how a chatbot becomes more useful when it can answer from selected material instead of only general model knowledge.  
-This made the project feel more realistic and closer to real-world AI applications.
+By integrating the chatbot into my own website, I created something that:
+- is interactive  
+- demonstrates my technical skills  
+- can be used by other people visiting my portfolio  
+
+It also gave me a much better understanding of how modern AI assistants are built and connected to real data.
+
+---
 
 ## GitHub Repository
 
 [View the project on GitHub](PASTE-YOUR-GITHUB-LINK-HERE)
 
+---
+
 ## Screenshots
 
-Add screenshots of the chatbot here.
-
-![Chatbot screenshot](chatbot-screenshot.jpg)
+![Chatbot screenshot](/portfolio/images/chatbot-screenshot.png)
