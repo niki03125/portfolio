@@ -21,7 +21,7 @@
 
   
   
-    <meta name="description" content="A chatbot project built with Retrieval Augmented Generation (RAG), where the model answers based on my own material.">
+    <meta name="description" content="A RAG chatbot integrated directly into my portfolio website, built with Dify, a Java backend, and custom web integration.">
   
   
   
@@ -40,7 +40,7 @@
   <meta property="og:url" content="http://localhost:1313/posts/chatbot-copy/">
   <meta property="og:site_name" content="Blowfish">
   <meta property="og:title" content="RAG Chatbot">
-  <meta property="og:description" content="A chatbot project built with Retrieval Augmented Generation (RAG), where the model answers based on my own material.">
+  <meta property="og:description" content="A RAG chatbot integrated directly into my portfolio website, built with Dify, a Java backend, and custom web integration.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -50,7 +50,7 @@
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="RAG Chatbot">
-  <meta name="twitter:description" content="A chatbot project built with Retrieval Augmented Generation (RAG), where the model answers based on my own material.">
+  <meta name="twitter:description" content="A RAG chatbot integrated directly into my portfolio website, built with Dify, a Java backend, and custom web integration.">
 
   
   
@@ -203,7 +203,7 @@
     "articleSection": "Posts",
     "name": "RAG Chatbot",
     "headline": "RAG Chatbot",
-    "description": "A chatbot project built with Retrieval Augmented Generation (RAG), where the model answers based on my own material.",
+    "description": "A RAG chatbot integrated directly into my portfolio website, built with Dify, a Java backend, and custom web integration.",
     "inLanguage": "en-us",
     "url" : "http://localhost:1313/posts/chatbot-copy/",
     "author" : {
@@ -219,7 +219,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "519"
+    "wordCount": "575"
   }]
   </script>
 
@@ -510,6 +510,48 @@
   <article>
     
     
+      
+      
+      
+      
+        
+
+
+
+
+
+  
+    
+  
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+
+      
+    
 
     
     <header id="single_header" class="mt-5 max-w-prose">
@@ -567,7 +609,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-04-16T00:00:00&#43;00:00">16 April 2026</time><span class="px-2 text-primary-500">&middot;</span><span>519 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+      <time datetime="2026-04-16T00:00:00&#43;00:00">16 April 2026</time><span class="px-2 text-primary-500">&middot;</span><span>575 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
     
 
     
@@ -646,10 +688,29 @@
     </span>
     
 </h2>
-<p>This project is a <strong>RAG chatbot</strong> built as part of my AI-driven application development course.<br>
-The goal was to create a chatbot that can answer questions based on a specific set of documents instead of only relying on the model&rsquo;s general knowledge.</p>
-<p>RAG stands for <strong>Retrieval Augmented Generation</strong>.<br>
-This means the chatbot first searches through selected material, retrieves the most relevant information, and then uses that information to generate an answer.</p>
+<p>This project is a <strong>RAG chatbot integrated directly into my portfolio website</strong>.<br>
+The goal was not only to build a chatbot, but to make it <strong>understand and answer questions about my own portfolio content</strong>.</p>
+<p>The chatbot uses <strong>Retrieval Augmented Generation (RAG)</strong>, meaning it answers based on my own data instead of only relying on general AI knowledge.</p>
+<hr>
+
+<h2 class="relative group">Live Integration on My Website
+    <div id="live-integration-on-my-website" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#live-integration-on-my-website" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>A key part of this project is that the chatbot is <strong>fully integrated into my portfolio website</strong>.</p>
+<p>Users can:</p>
+<ul>
+<li>ask questions directly on the site</li>
+<li>get answers based on my projects and content</li>
+<li>interact with the chatbot in real time</li>
+</ul>
+<p>This makes the portfolio more interactive and demonstrates a real-world AI application.</p>
+<hr>
 
 <h2 class="relative group">What the Chatbot Does
     <div id="what-the-chatbot-does" class="anchor"></div>
@@ -660,80 +721,95 @@ This means the chatbot first searches through selected material, retrieves the m
     </span>
     
 </h2>
-<p>The chatbot allows a user to ask questions about a chosen set of documents or course material.</p>
-<p>Instead of answering freely from the language model alone, it:</p>
+<p>Instead of answering freely, the chatbot:</p>
 <ol>
 <li>receives a question from the user</li>
-<li>searches relevant text chunks in the uploaded material</li>
-<li>retrieves the most relevant information</li>
-<li>uses that context to generate a grounded answer</li>
+<li>sends the request to a backend API</li>
+<li>retrieves relevant information from my portfolio data</li>
+<li>generates a contextual answer</li>
 </ol>
-<p>This makes the chatbot more useful when working with specific documents, notes, or learning material.</p>
+<p>This ensures that answers are:</p>
+<ul>
+<li>relevant</li>
+<li>based on my own work</li>
+<li>more reliable than a standard chatbot</li>
+</ul>
+<hr>
 
-<h2 class="relative group">How I Built It
-    <div id="how-i-built-it" class="anchor"></div>
+<h2 class="relative group">System Architecture
+    <div id="system-architecture" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#how-i-built-it" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#system-architecture" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>To build this project, I worked with the basic RAG pipeline:</p>
-<ul>
-<li>I started with a set of documents or text material</li>
-<li>The material was split into smaller chunks</li>
-<li>These chunks were converted into embeddings</li>
-<li>The embeddings were stored so they could be searched</li>
-<li>When the user asks a question, the system retrieves the most relevant chunks</li>
-<li>The retrieved text is then sent together with the prompt to the language model</li>
-<li>The model generates an answer based on that context</li>
-</ul>
-<p>The main idea was to connect <strong>my own material</strong> to an LLM in a structured way.</p>
+<p>This project is built as a complete pipeline consisting of frontend, backend, and AI system.</p>
 
-<h2 class="relative group">Why RAG is Useful
-    <div id="why-rag-is-useful" class="anchor"></div>
+<h3 class="relative group">1. Data Collection
+    <div id="1-data-collection" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-rag-is-useful" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-data-collection" aria-label="Anchor">#</a>
     </span>
     
-</h2>
-<p>One of the important things I learned is that RAG can be very useful when you want answers based on specific sources.</p>
-<p>RAG is valuable because it can:</p>
+</h3>
 <ul>
-<li>make answers more relevant to a chosen topic</li>
-<li>reduce hallucinations</li>
-<li>let the chatbot use custom documents</li>
-<li>make it easier to build domain-specific assistants</li>
-</ul>
-<p>At the same time, RAG also has limitations:</p>
-<ul>
-<li>the answer quality depends on the quality of the source material</li>
-<li>chunking and retrieval strategy matter a lot</li>
-<li>if the wrong context is retrieved, the answer can still be weak</li>
-<li>it is not always the best solution for every task</li>
+<li>My portfolio website is crawled using a <strong>Java application</strong></li>
+<li>A sitemap is used to find all pages</li>
+<li>Content is extracted using <strong>Jina Reader</strong></li>
+<li>The text is cleaned and converted into markdown</li>
 </ul>
 
-<h2 class="relative group">What I Learned
-    <div id="what-i-learned" class="anchor"></div>
+<h3 class="relative group">2. Knowledge Base (RAG)
+    <div id="2-knowledge-base-rag" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-i-learned" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-knowledge-base-rag" aria-label="Anchor">#</a>
     </span>
     
-</h2>
-<p>Through this project, I learned more about:</p>
+</h3>
 <ul>
-<li>how RAG architecture works in practice</li>
-<li>how embeddings are used to represent text</li>
-<li>how retrieval helps connect a language model to external knowledge</li>
-<li>the difference between a normal chatbot and a RAG-based chatbot</li>
-<li>why data quality and structure are important in AI systems</li>
+<li>The extracted content is stored in <strong>Dify Knowledge</strong></li>
+<li>The text is split into chunks</li>
+<li>The chunks are converted into embeddings</li>
+<li>This enables semantic search across my portfolio</li>
 </ul>
-<p>I also learned that building AI applications is not only about the model itself, but also about the pipeline around it.</p>
+
+<h3 class="relative group">3. Backend (API Layer)
+    <div id="3-backend-api-layer" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-backend-api-layer" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>A <strong>Java backend server</strong> handles requests</li>
+<li>The backend exposes a <code>/chat</code> endpoint</li>
+<li>It securely connects to the <strong>Dify API</strong></li>
+<li>API keys are stored using <strong>GitHub Secrets</strong></li>
+</ul>
+
+<h3 class="relative group">4. Frontend Integration
+    <div id="4-frontend-integration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-frontend-integration" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>A custom chat interface is added to my Hugo portfolio</li>
+<li>The frontend sends user questions using JavaScript (Fetch API)</li>
+<li>The chatbot response is displayed directly on the website</li>
+</ul>
+<hr>
 
 <h2 class="relative group">Technologies Used
     <div id="technologies-used" class="anchor"></div>
@@ -745,12 +821,60 @@ This means the chatbot first searches through selected material, retrieves the m
     
 </h2>
 <ul>
-<li>Large Language Model (LLM)</li>
-<li>Retrieval Augmented Generation (RAG)</li>
-<li>Embeddings</li>
-<li>Document chunking</li>
-<li>Retrieval / semantic search</li>
+<li><strong>Hugo</strong> – portfolio website</li>
+<li><strong>GitHub Pages</strong> – hosting</li>
+<li><strong>JavaScript (Fetch API)</strong> – frontend communication</li>
+<li><strong>Java (VS Code)</strong> – backend API and crawler</li>
+<li><strong>Spark Java</strong> – lightweight API server</li>
+<li><strong>Dify</strong> – RAG system and chatbot</li>
+<li><strong>Jina Reader</strong> – content extraction</li>
+<li><strong>GitHub Actions (Secrets &amp; Variables)</strong> – secure API key handling</li>
 </ul>
+<hr>
+
+<h2 class="relative group">Why RAG is Useful
+    <div id="why-rag-is-useful" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-rag-is-useful" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>RAG makes it possible for the chatbot to:</p>
+<ul>
+<li>answer based on real data instead of guessing</li>
+<li>reduce hallucinations</li>
+<li>provide domain-specific knowledge</li>
+<li>connect AI to custom content</li>
+</ul>
+<p>At the same time, I learned that:</p>
+<ul>
+<li>good data quality is very important</li>
+<li>chunking and retrieval strategy matter a lot</li>
+<li>wrong context can still lead to weak answers</li>
+</ul>
+<hr>
+
+<h2 class="relative group">What I Learned
+    <div id="what-i-learned" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-i-learned" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Through this project, I learned:</p>
+<ul>
+<li>how a full RAG pipeline works in practice</li>
+<li>how to connect a frontend, backend, and AI system</li>
+<li>how APIs are used to integrate AI into real applications</li>
+<li>how to handle requests, encoding, and data flow</li>
+<li>how to test and deploy a working AI system</li>
+</ul>
+<p>This project showed me that building AI applications involves much more than just using a model — it requires a complete system.</p>
+<hr>
 
 <h2 class="relative group">Reflection
     <div id="reflection" class="anchor"></div>
@@ -761,9 +885,15 @@ This means the chatbot first searches through selected material, retrieves the m
     </span>
     
 </h2>
-<p>This project gave me a practical introduction to how modern AI assistants can be connected to real data.</p>
-<p>It was especially interesting to see how a chatbot becomes more useful when it can answer from selected material instead of only general model knowledge.<br>
-This made the project feel more realistic and closer to real-world AI applications.</p>
+<p>This project felt like a <strong>real-world AI application</strong>, not just a demo.</p>
+<p>By integrating the chatbot into my own website, I created something that:</p>
+<ul>
+<li>is interactive</li>
+<li>demonstrates my technical skills</li>
+<li>can be used by other people visiting my portfolio</li>
+</ul>
+<p>It also gave me a much better understanding of how modern AI assistants are built and connected to real data.</p>
+<hr>
 
 <h2 class="relative group">GitHub Repository
     <div id="github-repository" class="anchor"></div>
@@ -774,7 +904,8 @@ This made the project feel more realistic and closer to real-world AI applicatio
     </span>
     
 </h2>
-<p><a href="PASTE-YOUR-GITHUB-LINK-HERE" >View the project on GitHub</a></p>
+<p><a href="https://github.com/niki03125/portfolio"  target="_blank" rel="noreferrer">View the project on GitHub</a></p>
+<hr>
 
 <h2 class="relative group">Screenshots
     <div id="screenshots" class="anchor"></div>
@@ -785,14 +916,13 @@ This made the project feel more realistic and closer to real-world AI applicatio
     </span>
     
 </h2>
-<p>Add screenshots of the chatbot here.</p>
 <figure><img
     class="my-0 rounded-md"
     loading="lazy"
     decoding="async"
     fetchpriority="low"
     alt="Chatbot screenshot"
-    src="chatbot-screenshot.jpg"
+    src="/portfolio/images/chatbot-screenshot.png"
     ></figure>
 
           
@@ -836,6 +966,19 @@ This made the project feel more realistic and closer to real-world AI applicatio
           
         </span>
         <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/code-agents/">
+              <span class="leading-6">
+                Code Agents&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-04-20T00:00:00&#43;00:00">20 April 2026</time>
+              </span>
+            
           
         </span>
       </div>
