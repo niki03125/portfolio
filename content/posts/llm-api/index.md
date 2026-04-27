@@ -5,179 +5,213 @@ description: "Setting up a fullstack application with a Java Spring Boot backend
 featureimage: "/chatbot-cover.jpg"
 showHero: true
 heroStyle: "basic"
-github: "https://github.com/niki03125/portfolio"
+github: "https://github.com/niki03125/AI-vurdering-af-en-opgave-ud-fra-en-rubric"
 draft: false
 ---
 
 ## Project Overview
 
-In this project, I worked on setting up a **fullstack application** consisting of a Java backend and a modern frontend.
+This project focuses on setting up a **fullstack application with a Java Spring Boot backend and a Vite frontend**.
 
-The goal was to run both parts locally and connect them, but the process turned into a deep dive into **debugging and understanding how development environments actually work**.
+The goal was to get both parts running locally and connected, but the process turned into a deep dive into **debugging and understanding how development environments actually work**.
 
-Instead of just writing code, I spent a lot of time solving issues related to setup, configuration, and system behavior — which ended up being one of the most valuable learning experiences.
-
----
-
-## Running Backend and Frontend Together
-
-The application is split into two main parts:
-
-- A **Spring Boot backend** running on:
-  http://localhost:8080
-
-- A **Vite frontend** running on:
-  http://localhost:5173
-
-To make everything work, both systems must run at the same time.  
-The frontend communicates with the backend using API requests.
-
-This setup reflects how many real-world applications are structured.
+Instead of only building features, I worked through several real-world issues that are common in software development.
 
 ---
 
-## Debugging Process and Errors
+## Running the Application Locally
 
-While setting up the project, I encountered several different types of errors.  
-Instead of just fixing them quickly, I focused on understanding **why they happened**, which helped me gain a much deeper understanding of the system.
+A key part of this project is running both backend and frontend at the same time.
 
----
+The system is split into two parts:
 
-### Environment Setup Issues
+- Backend:
+  http://localhost:8080  
 
-At the beginning, I ran into problems simply trying to start the backend.
+- Frontend:
+  http://localhost:5173  
 
-The first issue was that Maven was not recognized:
-
-mvn : not recognized
-
-This happened because Maven was not installed or configured correctly in my system PATH.  
-After installing Maven and setting up the environment variables, I was able to run backend commands.
+The frontend communicates with the backend using API requests, which is a standard structure in modern web applications.
 
 ---
 
-### Java Version Conflict
+## What the System Does
 
-After getting Maven working, I encountered another issue:
+The application works as a simple fullstack setup:
 
-class file has wrong version 61.0, should be 55.0
+1. the frontend sends a request  
+2. the backend receives it  
+3. the backend processes the logic  
+4. a response is returned to the frontend  
 
-This error means that the project was built using a newer Java version than the one currently running.
-
-- Version 61 = Java 17  
-- Version 55 = Java 11  
-
-Spring Boot 3 requires Java 17, but my system was using Java 11.
-
-I solved this by running the backend inside IntelliJ using Java 17, which made everything compatible.
+This setup helped me understand how data flows between frontend and backend systems.
 
 ---
 
-### BOM (Byte Order Mark) Error
+## Debugging and Issues Encountered
 
-One of the more confusing errors I encountered was:
+During development, I encountered several issues.  
+Instead of just fixing them, I focused on understanding **what caused them and how to solve them properly**.
 
-illegal character: '\ufeff'
+---
 
-This turned out to be caused by something called a **BOM (Byte Order Mark)**.
+## Common Errors and Fixes
 
-A BOM is an invisible character placed at the beginning of a file to indicate encoding.  
-While it can be useful in some contexts, it breaks many development tools.
+### 1. Maven Not Recognized
 
-For example, a file might look like this:
+At first, I could not run the backend:
 
+mvn : not recognized  
+
+This happened because Maven was not installed or added to PATH.
+
+**Fix:**
+- Installed Maven  
+- Added it to system PATH  
+
+---
+
+### 2. Java Version Conflict
+
+I then got this error:
+
+class file has wrong version 61.0, should be 55.0  
+
+This means:
+
+- Java 17 = version 61  
+- Java 11 = version 55  
+
+Spring Boot requires Java 17, but my system was using Java 11.
+
+**Fix:**
+- Ran the backend in IntelliJ using Java 17  
+
+---
+
+### 3. BOM (Byte Order Mark) Error
+
+Another issue I encountered was:
+
+illegal character: '\ufeff'  
+
+This was caused by something called a **BOM (Byte Order Mark)**.
+
+A BOM is an invisible character at the start of a file that can break:
+
+- Java  
+- JSON  
+- Node/Vite  
+
+Example:
 ﻿{
-  "name": "project"
+"name": "project"
 }
 
-That hidden character before `{` is enough to break Java and JSON parsing.
 
-The issue happened because some tools saved files as:
+That hidden character breaks parsing.
 
-UTF-8 with BOM
+**Why it happened:**
+Some tools saved files as:
 
-I fixed this by changing the encoding to:
+UTF-8 with BOM  
 
-UTF-8 (without BOM)
-
-and saving the files again.
-
----
-
-### Frontend Setup Issues
-
-When setting up the frontend, I encountered errors related to Node and Vite.
-
-At first, Vite was not recognized:
-
-'vite' is not recognized
-
-This was because the dependencies had not been installed.  
-Running:
-
-npm install
-
-fixed the issue.
+**Fix:**
+- Changed encoding to:
+  UTF-8 (without BOM)  
+- Used "Save with Encoding → UTF-8"  
 
 ---
 
-Another issue occurred when trying to start the frontend:
+### 4. Vite Not Recognized
 
-Could not read package.json
+When starting the frontend:
+
+'vite' is not recognized  
+
+This happened because dependencies were not installed.
+
+**Fix:**
+npm install  
+
+---
+
+### 5. Running npm in the Wrong Folder
+
+I also got:
+
+Could not read package.json  
 
 This happened because I ran the command in the wrong directory.
 
-The fix was simply:
-
+**Fix:**
 cd frontend  
-npm run dev
+npm run dev  
 
 ---
 
-### Port Conflicts
+### 6. Port 8080 Already in Use
 
-When running the backend, I also encountered this error:
+When starting the backend:
 
-Port 8080 was already in use
+Port 8080 was already in use  
 
-This meant that another process was already using the port.
+This means another process was already running.
 
-I identified and stopped the process using:
-
+**Fix:**
 netstat -ano | findstr :8080  
 taskkill /PID <id> /F  
 
-After that, the backend started successfully.
+---
+
+## Technologies Used
+
+- **Java (Spring Boot)** – backend server  
+- **Vite / React** – frontend  
+- **Node.js & npm** – frontend dependencies  
+- **IntelliJ** – backend development  
+- **VS Code** – frontend development  
+- **Maven** – build tool  
+
+---
+
+## Why This Was Important
+
+This project showed me that development is not only about writing code, but also about:
+
+- setting up the environment  
+- understanding tools and dependencies  
+- solving unexpected errors  
+
+Issues like BOM and Java versions are not obvious, but they can completely break an application.
 
 ---
 
 ## What I Learned
 
-This project taught me that building applications is not just about writing code — it is also about understanding the environment in which the code runs.
+Through this project, I learned:
 
-I learned:
-
-- how frontend and backend systems interact  
-- how environment variables and system configuration affect applications  
-- how encoding (like BOM) can break code in unexpected ways  
-- how to debug real-world errors step by step  
-- how to read and understand error messages instead of ignoring them  
+- how to run frontend and backend together  
+- how to debug environment issues  
+- how encoding (like BOM) can affect code  
+- how to read and understand error messages  
+- how real-world debugging works  
 
 ---
 
 ## Reflection
 
-This project was a great example of how development often involves solving problems that are not directly related to the application logic.
+This project felt like a real development experience rather than just building a feature.
 
-Many of the issues I encountered were:
+I encountered:
 
-- configuration problems  
+- setup problems  
 - system-level errors  
-- hidden bugs (like BOM)  
+- hidden bugs  
 
-By working through these challenges, I gained a much better understanding of how fullstack systems operate in practice.
+By solving these, I gained a much better understanding of how fullstack systems work in practice.
 
-Instead of just building features, I learned how to **debug, analyze, and fix complex issues**, which is an essential skill in software development.
+It showed me that being able to **debug and understand errors** is just as important as writing code.
 
 ---
 
